@@ -127,7 +127,7 @@ if (!$setup) {
                 <input type="text" placeholder="Enter MySQL Username" name="db_username" required>
                 <input type="text" placeholder="Enter MySQL Password" name="db_password">
                 <input type="text" placeholder="Enter Database name" name="db_name" required>
-                <!-- <input type="text" placeholder="Develop URL ex: localhost" name="develop_url" value="<?php echo $_SERVER['HTTP_HOST'];?>" required> -->
+                <input type="text" placeholder="Develop URL ex: localhost" name="develop_url" value="<?php echo $_SERVER['HTTP_HOST'];?>" required>
                 <input type="submit" value="Submit" name="submit" style="width: 50%">
             </form>
         </div>

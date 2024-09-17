@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
     	file_put_contents($configFile, $configData);
 	    $setup=true;
     }
-
+    
+    $http_host = htmlspecialchars($_SERVER['HTTP_HOST', ENT_QUOTES);
 
     #TODO: populate the DB (ask for admin credentials and create here)
     #TODO: if db exists, populate, else create and populate
@@ -127,7 +128,7 @@ if (!$setup) {
                 <input type="text" placeholder="Enter MySQL Username" name="db_username" required>
                 <input type="text" placeholder="Enter MySQL Password" name="db_password">
                 <input type="text" placeholder="Enter Database name" name="db_name" required>
-                <!-- <input type="text" placeholder="Develop URL ex: localhost" name="develop_url" value="<?php echo $_SERVER['HTTP_HOST'];?>" required> -->
+                <input type="text" placeholder="Develop URL ex: localhost" name="develop_url" value="<?php echo $http_host;?>" required>
                 <input type="submit" value="Submit" name="submit" style="width: 50%">
             </form>
         </div>
